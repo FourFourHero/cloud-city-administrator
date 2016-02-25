@@ -197,8 +197,11 @@ def push(request):
     badge_count = badge_api.count_by_user(user)
     logging.warn('badge count: ' + str(badge_count))
 
+    # create extra info
+    extra = {}
+    extra['message_num'] = message_num
     logging.warn('sending message: ' + message)
-    device.send_message(message, badge=badge_count)
+    device.send_message(message, badge=badge_count, extra=extra)
 
     response_dict = success_dict()
     response_dict['user'] = user.first_name
