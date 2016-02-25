@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'push_notifications',
     #'badger',
-    #'lobot'
+    'lobot'
 ]
 
 MIDDLEWARE_CLASSES = [
