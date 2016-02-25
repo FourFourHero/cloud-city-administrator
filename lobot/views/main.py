@@ -12,17 +12,15 @@ from badger.logic.badgetypes import BADGE_TYPES
 def bootstrap(request):
     logging.warn('bootstrap')
 
-    count = 0
+    user = None
     try:
         # andrew
-        user = User.objects.create_user('1', 'aschulak@ag.com', 'password')
-        user.first_name = 'Andrew'
-        user.save()
-        count += 1
+        user = User.objects.get(username='ltrempe')
     except:
-        logging.warn('user already exists')
+        logging.warn('no user')
 
     response_dict = success_dict()
+    response_dict['user'] = user.first_name
     response_dict['gcm_api_key'] = settings.PUSH_NOTIFICATIONS_SETTINGS['GCM_API_KEY']
     response_dict['apns_cer_file'] = settings.PUSH_NOTIFICATIONS_SETTINGS['APNS_CERTIFICATE']
     return render_json(request, response_dict)
