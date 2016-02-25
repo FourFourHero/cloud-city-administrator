@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^$', 'cca.views.main.home'),
     url(r'^admin/', admin.site.urls),
     url(r'^lobot/', include('lobot.urls')),
     url(r'^badger/', include('badger.urls')),
