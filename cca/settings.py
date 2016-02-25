@@ -136,7 +136,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 PUSH_NOTIFICATIONS_SETTINGS = {
         "GCM_API_KEY": "AIzaSyA8I3dx0Xb2AzlQ83VQVFN2ZrfPxWNke30",
-        "APNS_CERTIFICATE": PROJECT_ROOT + "/agi_push_cert.pem",
+        "APNS_CERTIFICATE": PROJECT_ROOT + "/lobot-apns-prod-cert.pem",
 }
 
 ###
