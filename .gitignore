@@ -1,0 +1,8 @@
+venv
+cca_db
+*.sqlite3
+*.pyc
+*.DS_Store
+*.db
+staticfiles
+settings_local.py
