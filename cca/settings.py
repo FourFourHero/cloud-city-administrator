@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^#56j1udry^wi(&06q!%sj^fz!vs7xhb)pnr(-guotfb(botj('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -137,6 +137,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 PUSH_NOTIFICATIONS_SETTINGS = {
         "GCM_API_KEY": "AIzaSyA8I3dx0Xb2AzlQ83VQVFN2ZrfPxWNke30",
         "APNS_CERTIFICATE": PROJECT_ROOT + "/lobot-apns-prod-cert.pem",
+        "APNS_HOST": "gateway.push.apple.com",
 }
 
 ###
